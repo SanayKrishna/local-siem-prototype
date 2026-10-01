@@ -1,6 +1,6 @@
-# SIEM Prototype (university project, local only)
+# SIEM Prototype (local only)
 
-Small SIEM built for a cybersecurity class. It makes fake logs, stores them in
+Small SIEM for learning detection workflows on a laptop. It makes fake logs, stores them in
 one SQLite file, finds 5 attacks with simple rules, and shows everything in a
 dashboard. No Docker, no cloud, no paid services.
 
@@ -97,8 +97,9 @@ working on Windows.
 - `tests/` — pytest files
 - `data/` — logs and `siem.db`, created on run, not in git
 
-## Notes for grading
+## Notes
 
 All logs are synthetic. Detector thresholds live at the top of each function in
 `src/detector.py` and take arguments, so they are easy to retune. The dashboard
-loads web fonts when online and falls back to system fonts offline.
+loads web fonts when online and falls back to system fonts offline. Mention the
+fallback in the writeup so the two looks are expected.
