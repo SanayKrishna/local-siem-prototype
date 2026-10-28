@@ -85,21 +85,21 @@ working on Windows.
 
 ## Layout
 
-- `demo.py` — full pipeline in one command
-- `src/config.py` — paths for data, logs, DB file
-- `src/generator.py` — fake logs with `--seed` and `--count`
-- `src/parsers.py` — 4 formats into one event dict
-- `src/ingest.py` — log files into SQLite
-- `src/detector.py` — 5 rules into incidents
-- `src/api.py` — FastAPI app
-- `src/dashboard.py` — Streamlit app (reads the DB directly)
-- `.streamlit/config.toml` — dashboard theme
-- `tests/` — pytest files
-- `data/` — logs and `siem.db`, created on run, not in git
+- `demo.py`: full pipeline in one command
+- `src/config.py`: paths for data, logs, DB file
+- `src/generator.py`: fake logs with `--seed` and `--count`
+- `src/parsers.py`: 4 formats into one event dict
+- `src/ingest.py`: log files into SQLite
+- `src/detector.py`: 5 rules into incidents
+- `src/api.py`: FastAPI app
+- `src/dashboard.py`: Streamlit app (reads the DB directly)
+- `.streamlit/config.toml`: dashboard theme
+- `tests/`: pytest files
+- `data/`: logs and `siem.db`, created on run, not in git
 
 ## Notes
 
 All logs are synthetic. Detector thresholds live at the top of each function in
 `src/detector.py` and take arguments, so they are easy to retune. The dashboard
-loads web fonts when online and falls back to system fonts offline. Mention the
-fallback in the writeup so the two looks are expected.
+loads web fonts when online and falls back to system fonts offline, so it looks
+slightly different without a connection.
